@@ -1,74 +1,288 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>transit-master by onlyurei</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">transit-master</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/onlyurei/transit-master" class="btn">View on GitHub</a>
-      <a href="https://github.com/onlyurei/transit-master/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/onlyurei/transit-master/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
 
-    <section class="main-content">
-      <p>Transit Master - Chicago CTA uses a sleek, clean, and minimalist design, to help you get CTA Bus and Train ('L') stop and prediction info easily and fast.</p>
+<html><head>
+	<meta charset="utf-8">
+	<meta name="apple-itunes-app" content="app-id=638601183">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transit Master - Chicago CTA</title>
 
-<p>With the help of the app, you can always have confidence and peace of mind when using CTA to get around the city anywhere anytime. </p>
+	
+	<script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;appId=385205984962960&amp;version=v2.0"></script>
+	
 
-<p>Become a Master of Chicago's Public Transit today!</p>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<p>This is an universal app that works great and responsively on both iPhone/iPod Touch and iPad, NO need to pay twice for the same app!</p>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 
-<p>• Color-coded prediction times give you a quick scan of what's coming up:
+html, body, #content {
+	margin: 0px;
+	height: 100%;
+	font-family: sans-serif;
+	font-weight: lighter;
+	color: #040404;
+	background-color: #e3e3e3;
+	text-align: center;
+	line-height: 1.4;
+}
+#splash {
+	height: 100%;
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	max-width: 700px;
+	margin: auto;
+	position: relative;
+}
+@media screen and (min-width: 700px) {
+	#splash > div {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 1em;
+		height: 100%;
+	}
+	#splash #left {
+		text-align: right;
+	}
+	#splash #right {
+		text-align: left;
+	}
+	#splash .iphone {
+		width: 288px;
+		height: 576px;
+	}
+	#screenshots img {
+		max-width: 200px;
+	}
+	#like-container {
+		position: absolute;
+		top: 100%;
+		right: 20px;
+		margin-top: -50px;
+	}
+}
+#chevron {
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	margin-top: -2em;
+	color: #040404;
+	opacity: 0.5;
+	margin-left: -0.5em;
+}
+@media screen and (max-width: 700px) {
+	#chevron {
+		display: none;
+	}
+	#splash .iphone {
+		width: 192px;
+		height: 384px;
+		display: inline-block;
+	}
+	#splash #left {
+		padding: 10px;
+	}
+	#screenshots img {
+		max-width: 100px;
+	}
+	#splash .appstore {
+		display: none;
+	}
+}
+img.appstore {
+	max-width: 120px;
+}
+.iphone {
+	background-image: url('http://app-stop.appspot.com/static/5s.png');
+	background-size: contain;
+	position: relative;
+	width: 720px;
+	height: 1440px;
+}
+.iphone img {
+	position: absolute;
+	top: 17.9%;
+	left: 14%;
+	width: 73%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway", sans-serif;
+	font-weight: normal;
+}
+#icon-row {
+	margin: 30px;
+	margin-top: 40px;
+	margin-bottom: 80px;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	position: relative;
+}
+#icon-row #icon-container {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	border: 10px solid #e3e3e3;
+}
+#icon-row img {
+	width: 100%;
+	border-radius: 19px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+}
+#description {
+	margin: auto;
+	width: 90%;
+	max-width: 600px;
+}
+#screenshots {
+	margin-bottom: 2em;
+}
+#screenshots img {
+	border: 1px solid white;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	margin: 1em;
+}
+#description {
+	white-space: pre-wrap;
+}
+#stars {
+	text-align: center;
+	font-style: italic;
+	font-size: small;
+}
+#stars span {
+	display: block;
+	font-size: 30px;
+	font-style: normal;
+}
+#attribution {
+	font-size: small;
+	padding: 2em;
+}
+#attribution a {
+	color: #040404;
+}
+</style>
+
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+	<!-- begin Facebook SDK -->
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/ao6eUeuGXQq.js?version=42#channel=f15e0523fe9da4&amp;origin=http%3A%2F%2Fapp-stop.appspot.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/ao6eUeuGXQq.js?version=42#channel=f15e0523fe9da4&amp;origin=http%3A%2F%2Fapp-stop.appspot.com" style="border: none;"></iframe></div></div></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=385205984962960&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- end Facebook SDK -->
+
+
+	
+<div id="content">
+
+
+<div id="chevron" class="fa fa-chevron-down"></div>
+<div id="splash">
+	<div id="left">
+		<h1>Transit Master - Chicago CTA</h1>
+		<p>Transit Master - Chicago CTA uses a sleek, clean, and minimalist design, to help you get CTA Bus and Train ('L') stop and prediction info easily and fast.</p>
+		<a href="https://itunes.apple.com/us/app/transit-master-chicago-cta/id638601183?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+	</div>
+	<div id="right">
+		<div class="iphone">
+			<img src="http://a1.mzstatic.com/us/r30/Purple20/v4/de/a5/54/dea554c5-a7e7-9cc1-ee82-91161f5abf3b/screen696x696.jpeg">
+		</div>
+	</div>
+</div>
+
+<div id="icon-row">
+	<div id="icon-container">
+		<img src="http://is3.mzstatic.com/image/thumb/Purple60/v4/c4/13/b5/c413b531-b4ca-538c-a3c7-58504d9aa2ea/source/512x512bb.jpg">
+	</div>
+</div>
+
+<div id="screenshots">
+	
+		<img src="http://a1.mzstatic.com/us/r30/Purple18/v4/b3/02/b3/b302b3fe-eae7-cf35-a9ff-af5da9787bb8/screen696x696.jpeg">
+	
+		<img src="http://a2.mzstatic.com/us/r30/Purple18/v4/a7/76/61/a77661db-dde9-6b46-fd1a-f2c13ee8aebc/screen696x696.jpeg">
+	
+</div>
+
+
+<p id="stars"><span>★★★★</span> App Store Rating</p>
+
+
+<p id="description">Transit Master - Chicago CTA uses a sleek, clean, and minimalist design, to help you get CTA Bus and Train ('L') stop and prediction info easily and fast.
+
+With the help of the app, you can always have confidence and peace of mind when using CTA to get around the city anywhere anytime. 
+
+Become a Master of Chicago's Public Transit today!
+
+This is an universal app that works great and responsively on both iPhone/iPod Touch and iPad, NO need to pay twice for the same app!
+
+• Color-coded prediction times give you a quick scan of what's coming up:
 Red: arriving within 5 minutes.
 Blue: arriving between 6 ~ 10 minutes.
-Grey: arriving in more than 10 minutes.</p>
+Grey: arriving in more than 10 minutes.
 
-<p>• Toggle predictions display</p>
+• Toggle predictions display
+- Tap on bus route number/train line name to toggle whether to show vehicle ID and current distance to the stop
+- Tap on prediction times to toggle ETA in minutes left, or in your local time
+- Tap on the "ALL" button to toggle whether to show predictions for the selected route, or for all routes at the stop
+- Tap on route destinations to toggle whether to sort predictions by ETA, or by route
 
-<ul>
-<li>Tap on bus route number/train line name to toggle whether to show vehicle ID and current distance to the stop</li>
-<li>Tap on prediction times to toggle ETA in minutes left, or in your local time</li>
-<li>Tap on the "ALL" button to toggle whether to show predictions for the selected route, or for all routes at the stop</li>
-<li>Tap on route destinations to toggle whether to sort predictions by ETA, or by route</li>
-</ul>
+• Look up predictions easily 
+Scroll or Search routes/directions/stops. Routes and Directions are ordered alphabetically; Stops and Favorites can be ordered either alphabetically or by distance to your current location (turn on Geolocation by tapping on the tracking icon on the top left).
 
-<p>• Look up predictions easily 
-Scroll or Search routes/directions/stops. Routes and Directions are ordered alphabetically; Stops and Favorites can be ordered either alphabetically or by distance to your current location (turn on Geolocation by tapping on the tracking icon on the top left).</p>
+• Search train stops
+Type the line color (blue/brown/green/orange/pink/purple/red/yellow) or stop name to filter train stops.
 
-<p>• Search train stops
-Type the line color (blue/brown/green/orange/pink/purple/red/yellow) or stop name to filter train stops.</p>
+• When at a bus stop 
+Use the "Find a Stop by Stop ID" feature and type in the stop's ID, which should be displayed on the bus routes board, to get faster access of the predictions.
 
-<p>• When at a bus stop 
-Use the "Find a Stop by Stop ID" feature and type in the stop's ID, which should be displayed on the bus routes board, to get faster access of the predictions.</p>
+• Fresh and dynamic public transit data powered by Chicago Transit Authority (CTA) tracking service
+NOT static bus schedules. 
 
-<p>• Fresh and dynamic public transit data powered by Chicago Transit Authority (CTA) tracking service
-NOT static bus schedules. </p>
+• Automatic data refresh
+Vehicle arrival predictions are automatically refreshed every minute, which is the minimal update interval supported by CTA's tracking service. No manual effort needed.
 
-<p>• Automatic data refresh
-Vehicle arrival predictions are automatically refreshed every minute, which is the minimal update interval supported by CTA's tracking service. No manual effort needed.</p>
+• Data caching
+The app caches as much static information as possible, such as routes/directions/stops, to help reducing your phone's unnecessary data usage, and boost tracking speed. The cache will be automatically refreshed in reasonable intervals to keep the data fresh.
 
-<p>• Data caching
-The app caches as much static information as possible, such as routes/directions/stops, to help reducing your phone's unnecessary data usage, and boost tracking speed. The cache will be automatically refreshed in reasonable intervals to keep the data fresh.</p>
+Happy predicting and riding!</p>
 
-<p>Happy predicting and riding!</p>
+<p>
+	<a href="https://itunes.apple.com/us/app/transit-master-chicago-cta/id638601183?mt=8&amp;uo=4"><img class="appstore" src="http://app-stop.appspot.com/static/appstore.svg" alt="Download on the Apple App Store"></a>
+</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/onlyurei/transit-master">transit-master</a> is maintained by <a href="https://github.com/onlyurei">onlyurei</a>.</span>
+<p>
+	</p><div id="like-container"><div class="fb-like fb_iframe_widget" data-href="http://app-stop.appspot.com/id/638601183" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=385205984962960&amp;container_width=0&amp;href=http%3A%2F%2Fapp-stop.appspot.com%2Fid%2F638601183&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 106px; height: 20px;"><iframe name="f302cf65e1235b4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=385205984962960&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fao6eUeuGXQq.js%3Fversion%3D42%23cb%3Df7cf0c4fac3c8%26domain%3Dapp-stop.appspot.com%26origin%3Dhttp%253A%252F%252Fapp-stop.appspot.com%252Ff15e0523fe9da4%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fapp-stop.appspot.com%2Fid%2F638601183&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 106px; height: 20px;" class=""></iframe></span></div></div>
+	<script>
+	// dynamically create a Facebook like button for the current URL:
+	var like = document.createElement("div");
+	like.className = "fb-like";
+	like.setAttribute("data-href", location.href);
+	like.setAttribute("data-layout", "button_count");
+	like.setAttribute("data-action", "like");
+	like.setAttribute("data-show-faces", "true");
+	like.setAttribute("data-share", "true");
+	document.getElementById("like-container").appendChild(like);
+	</script>
+<p></p>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+<p id="copyright">© Cheng Fan </p>
 
-    </section>
+<p id="attribution">
+Landing page created automatically with <a href="http://app-stop.appspot.com">AppStop</a></p>
 
-  
-  </body>
-</html>
+
+</div>
+
+
+</body><style id="stylish-1" class="stylish" type="text/css"></style></html>
